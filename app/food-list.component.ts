@@ -32,11 +32,11 @@ import { CaloriesPipe } from './calories.pipe';
       </select>
       <food-display *ngFor="#currentFood of foodList | calories:filterCalories" [food]="currentFood" (click)="foodClicked(currentFood)" [class.selected]="currentFood === selectedFood"></food-display>
       <div class="row">
-        <div class="sub col-xs-3 col-sm-offset-1">
+        <div class="sub col-sm-3 col-sm-offset-1">
           <h3>Total Calories</h3>
           <h3>{{total(foodList)}}</h3>
         </div>
-        <div class="sub col-xs-3 col-sm-offset-2">
+        <div class="sub col-sm-3 col-sm-offset-2">
           <h3>Average Calories</h3>
           <h3>{{avg(foodList)}}</h3>
         </div>
@@ -59,7 +59,7 @@ export class FoodListComponent {
   }
   createFood(params: string[]): void{
     this.foodList.push(
-      new Food(params[0], parseInt(params[1]), params[2], this.foodList.length)
+      new Food(params[0], parseInt(params[1]), params[2], this.foodList.length, params[3])
     );
   }
   onChange(filterOption){

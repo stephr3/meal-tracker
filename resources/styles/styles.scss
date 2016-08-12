@@ -1,7 +1,8 @@
 $beige: #faf3dd;
 $pale-silver: #c8d5b9;
 $green-blue: #8fc0a9;
-$light-blue: #68b0ab;
+$light-green: #568f67;
+$select-green: #70a981;
 $dark-green: #4a7c59;
 
 body {
@@ -24,7 +25,14 @@ select{
   font-size: 2.5em;
   text-align: center;
 }
-
+.btn-success {
+  background-color: $dark-green;
+  border-color: $dark-green;
+}
+.btn-success:hover {
+  background-color: $light-green;
+  border-color: $light-green;
+}
 .container {
   background-color: $dark-green;
   border-radius: 10px;
@@ -39,7 +47,7 @@ select{
   min-width: 80%;
 }
 .selected {
-  color: $light-blue;
+  color: $select-green;
 }
 .sub {
   background-color: $dark-green;
@@ -47,7 +55,8 @@ select{
   color: #fff;
   font-size: .8em;
   margin: 15px;
-  min-height: 50px;
-  padding:10px;
+  min-height: 190px;
+  max-width: 190px;
+  padding: 30px 10px 10px;
   text-align: center;
 }

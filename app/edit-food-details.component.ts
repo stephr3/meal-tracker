@@ -14,6 +14,9 @@ import { Food } from './food.model';
     <div class="form-group">
       <input [(ngModel)]="food.details" class="input-lg">
     </div>
+    <div class="form-group">
+      <input [(ngModel)]="food.time" class="input-lg" type="time">
+    </div>
   `
 })
 export class EditFoodDetailsComponent {

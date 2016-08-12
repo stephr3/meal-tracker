@@ -17,7 +17,10 @@ import { Food } from './food.model';
     <div class="form-group">
       <input placeholder="Details" #newDetails class="input-lg">
     </div>
-    <button (click)="addFood(newName, newCalories, newDetails)" class=".btn btn-success btn-lg">Log Meal Item</button>
+    <div class="form-group">
+      <input placeholder="Time" #newTime class="input-lg" type="time">
+    </div>
+    <button (click)="addFood(newName, newCalories, newDetails, newTime)" class=".btn btn-success btn-lg">Log Meal Item</button>
   </form>
   `
 })
@@ -26,11 +29,12 @@ export class NewFoodComponent {
   constructor(){
     this.onSubmitNewFood = new EventEmitter();
   }
-  addFood(foodName: HTMLInputElement, foodCalories: HTMLInputElement, foodDetails: HTMLInputElement){
-    var params: string[] = [foodName.value, foodCalories.value, foodDetails.value];
+  addFood(foodName: HTMLInputElement, foodCalories: HTMLInputElement, foodDetails: HTMLInputElement, foodTime: HTMLInputElement){
+    var params: string[] = [foodName.value, foodCalories.value, foodDetails.value, foodTime.value];
     this.onSubmitNewFood.emit(params);
     foodName.value = "";
     foodCalories.value = "";
     foodDetails.value = "";
+    foodTime.value = "";
   }
 }
