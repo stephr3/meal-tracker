@@ -5,9 +5,15 @@ import { Food } from './food.model';
   selector: 'edit-food-details',
   inputs: ['food'],
   template: `
-    <input [(ngModel)]="food.name">
-    <input [(ngModel)]="food.calories" type="number">
-    <input [(ngModel)]="food.details">
+    <div class="form-group">
+      <input [(ngModel)]="food.name" class="input-lg">
+    </div>
+    <div class="form-group">
+      <input [(ngModel)]="food.calories" type="number" class="input-lg">
+    </div>
+    <div class="form-group">
+      <input [(ngModel)]="food.details" class="input-lg">
+    </div>
   `
 })
 export class EditFoodDetailsComponent {

@@ -6,13 +6,19 @@ import { Food } from './food.model';
   selector: 'new-food',
   outputs: ['onSubmitNewFood'],
   template: `
-    <h3>Log a New Meal Item</h3>
-    <form>
-      <input placeholder="Name" #newName>
-      <input placeholder="Calories" type="number" #newCalories>
-      <input placeholder="Details" #newDetails>
-      <button (click)="addFood(newName, newCalories, newDetails)">Log Meal Item</button>
-    </form>
+  <h3>Log a New Meal Item</h3>
+  <form>
+    <div class="form-group">
+      <input placeholder="Name" #newName class="input-lg">
+    </div>
+    <div class="form-group">
+      <input placeholder="Calories" type="number" #newCalories class="input-lg">
+    </div>
+    <div class="form-group">
+      <input placeholder="Details" #newDetails class="input-lg">
+    </div>
+    <button (click)="addFood(newName, newCalories, newDetails)" class=".btn btn-success">Log Meal Item</button>
+  </form>
   `
 })
 export class NewFoodComponent {
