@@ -1,16 +1,20 @@
 import { Component } from 'angular2/core';
 import { Food } from './food.model';
 import { FoodListComponent } from './food-list.component';
+import { ExerciseCalculatorComponent } from './exercise-calculator.component';
 
 @Component({
   selector: 'my-app',
-  directives: [FoodListComponent],
+  directives: [FoodListComponent, ExerciseCalculatorComponent],
   template: `
     <div class="jumbotron">
       <h1>Meal Tracker</h1>
     </div>
     <div class="container">
       <food-list [foodList]="foods"></food-list>
+    </div>
+    <div class="container">
+      <exercise-calculator [foodList]="foods"></exercise-calculator>
     </div>
   `
 })
