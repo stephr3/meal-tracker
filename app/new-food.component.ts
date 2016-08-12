@@ -17,7 +17,7 @@ import { Food } from './food.model';
     <div class="form-group">
       <input placeholder="Details" #newDetails class="input-lg">
     </div>
-    <button (click)="addFood(newName, newCalories, newDetails)" class=".btn btn-success">Log Meal Item</button>
+    <button (click)="addFood(newName, newCalories, newDetails)" class=".btn btn-success btn-lg">Log Meal Item</button>
   </form>
   `
 })
