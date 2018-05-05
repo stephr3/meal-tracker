@@ -1,5 +1,5 @@
 # Meal Tracker
-## *By Stephanie Gurung*
+## *By Stephanie Roth*
 
 ##### *With this application, a user can log meal items, edit their details, and filter them by calorie content. The user can also see their total calories consumed for that day, as well as average calories per meal item. The user can then calculate how many minutes they would have to jog to burn an inputted goal of calories.*
 
@@ -38,4 +38,4 @@ $ gulp serve
 License
 -------
 _This software is licensed under the MIT license._<br>
-Copyright (c) 2016 **Stephanie Gurung**
+Copyright (c) 2016 **Stephanie Roth**
